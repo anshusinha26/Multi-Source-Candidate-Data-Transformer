@@ -12,28 +12,34 @@ Pipeline guarantees deterministic behavior through stable ordering, fixed preced
 
 ## Architecture Diagram
 
-```text
-ATS JSON ---------> [ATS Adapter] -----> [ATS Extractor] --\
-                                                        \ 
-Resume PDF ------> [PDF Adapter] -----> [Resume Extractor] ---> [Fact Collector]
-                                                                  |
-                                                                  v
-                                                         [Normalization]
-                                                                  |
-                                                                  v
-                                                        [Deterministic Merge]
-                                                                  |
-                                                                  v
-                                                         [Confidence Scorer]
-                                                                  |
-                                                                  v
-                                                           [Validation]
-                                                                  |
-                                                                  v
-                                                   [Projection + Missing Policy]
-                                                                  |
-                                                                  v
-                                                              JSON Output
+```mermaid
+flowchart TD
+    ATS["ATS JSON"]
+    RESUME["Resume PDF"]
+
+    ATS --> ATSA["ATS Adapter"]
+    RESUME --> PDFA["PDF Adapter"]
+
+    ATSA --> ATSE["ATS Extractor"]
+    PDFA --> RESE["Resume Extractor"]
+
+    ATSE --> FC["Fact Collector"]
+    RESE --> FC
+
+    FC --> N["Normalization"]
+    N --> M["Deterministic Merge"]
+    M --> C["Confidence Scorer"]
+    C --> V["Validation"]
+    V --> P["Projection + Missing Policy"]
+    P --> O["Final JSON Output"]
+
+    classDef source fill:#E3F2FD,stroke:#1565C0,stroke-width:1px;
+    classDef process fill:#F5F5F5,stroke:#616161,stroke-width:1px;
+    classDef output fill:#E8F5E9,stroke:#2E7D32,stroke-width:1px;
+
+    class ATS,RESUME source;
+    class ATSA,PDFA,ATSE,RESE,FC,N,M,C,V,P process;
+    class O output;
 ```
 
 ## Supported Sources
