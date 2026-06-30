@@ -1,0 +1,13 @@
+{
+  "id": "cand-001",
+  "name": "Jane Doe",
+  "email": "jane.doe@acme.com",
+  "phone": "+1 (415) 555-2671",
+  "title": "Senior Software Engineer",
+  "company": "Acme Corporation",
+  "current_company": "Acme Corporation",
+  "location": {
+    "city": "San Francisco",
+    "country": "United States"
+  }
+}

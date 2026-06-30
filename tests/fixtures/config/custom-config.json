@@ -1,0 +1,55 @@
+{
+  "fields": [
+    {
+      "path": "candidate.id",
+      "type": "string",
+      "required": true,
+      "normalize": [],
+      "mapping": "mapped",
+      "from": "candidateId"
+    },
+    {
+      "path": "candidate.name",
+      "type": "string",
+      "required": true,
+      "normalize": [],
+      "mapping": "mapped",
+      "from": "fullName"
+    },
+    {
+      "path": "contact.primaryEmail",
+      "type": "string",
+      "required": true,
+      "normalize": [],
+      "mapping": "mapped",
+      "from": "emails[0]"
+    },
+    {
+      "path": "contact.primaryPhone",
+      "type": "string",
+      "required": true,
+      "normalize": ["E164"],
+      "mapping": "mapped",
+      "from": "phones[0]"
+    },
+    {
+      "path": "profile.skills",
+      "type": "string[]",
+      "required": false,
+      "normalize": ["canonical"],
+      "mapping": "mapped",
+      "from": "skills[].name"
+    },
+    {
+      "path": "profile.latestExperienceSummary",
+      "type": "string",
+      "required": false,
+      "normalize": [],
+      "mapping": "mapped",
+      "from": "experience[0].summary"
+    }
+  ],
+  "includeConfidence": true,
+  "includeProvenance": false,
+  "onMissing": "null"
+}

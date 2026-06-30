@@ -1,0 +1,16 @@
+Jane A. Doe
+jane.doe@acme.com
++1 415-555-2671
+
+Experience
+Nimbus Labs - Senior Software Engineer (Mar 2021 - Present)
+Built deterministic profile pipelines and data quality checks.
+Acme Corporation - Software Engineer (Jan 2018 - Feb 2021)
+Implemented ATS integrations and profile normalization services.
+
+Education
+University of California, Berkeley
+B.S. in Computer Science, 2018
+
+Skills
+JS, TS, Node, Postgres

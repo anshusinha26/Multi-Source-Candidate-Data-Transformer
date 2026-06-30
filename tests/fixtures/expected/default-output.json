@@ -1,0 +1,246 @@
+{
+  "candidateId": "ats:sample.json",
+  "fullName": "Jane Doe",
+  "emails": [
+    "jane.doe@acme.com"
+  ],
+  "phones": [
+    "+14155552671"
+  ],
+  "experience": [
+    {
+      "company": "Acme Corporation",
+      "title": "Senior Software Engineer",
+      "start": null,
+      "end": null,
+      "summary": "Nimbus Labs - Senior Software Engineer (Mar 2021 - Present)\nBuilt deterministic profile pipelines and data quality checks.\nAcme Corporation - Software Engineer (Jan 2018 - Feb 2021)\nImplemented ATS integrations and profile normalization services."
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of California, Berkeley",
+      "degree": null,
+      "field": null,
+      "endYear": null
+    }
+  ],
+  "skills": [
+    {
+      "name": "JavaScript",
+      "confidence": {
+        "value": 0.6775,
+        "model": "fixed_weighted",
+        "sourceWeight": 0.7,
+        "methodWeight": 0.75,
+        "agreementWeight": 0.5,
+        "rationale": "deterministic weighted confidence for skills[0].name"
+      },
+      "sources": [
+        {
+          "fieldPath": "skills[0].name",
+          "sourceKind": "resume_pdf",
+          "sourceId": "resume:sample.pdf",
+          "method": "regex_match",
+          "sourceOrder": 2,
+          "recordedAt": "2026-06-30T04:04:44.237Z",
+          "evidence": "explicit skills section"
+        }
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "confidence": {
+        "value": 0.6775,
+        "model": "fixed_weighted",
+        "sourceWeight": 0.7,
+        "methodWeight": 0.75,
+        "agreementWeight": 0.5,
+        "rationale": "deterministic weighted confidence for skills[1].name"
+      },
+      "sources": [
+        {
+          "fieldPath": "skills[1].name",
+          "sourceKind": "resume_pdf",
+          "sourceId": "resume:sample.pdf",
+          "method": "regex_match",
+          "sourceOrder": 2,
+          "recordedAt": "2026-06-30T04:04:44.237Z",
+          "evidence": "explicit skills section"
+        }
+      ]
+    },
+    {
+      "name": "Node.js",
+      "confidence": {
+        "value": 0.6775,
+        "model": "fixed_weighted",
+        "sourceWeight": 0.7,
+        "methodWeight": 0.75,
+        "agreementWeight": 0.5,
+        "rationale": "deterministic weighted confidence for skills[2].name"
+      },
+      "sources": [
+        {
+          "fieldPath": "skills[2].name",
+          "sourceKind": "resume_pdf",
+          "sourceId": "resume:sample.pdf",
+          "method": "regex_match",
+          "sourceOrder": 2,
+          "recordedAt": "2026-06-30T04:04:44.237Z",
+          "evidence": "explicit skills section"
+        }
+      ]
+    },
+    {
+      "name": "PostgreSQL",
+      "confidence": {
+        "value": 0.6775,
+        "model": "fixed_weighted",
+        "sourceWeight": 0.7,
+        "methodWeight": 0.75,
+        "agreementWeight": 0.5,
+        "rationale": "deterministic weighted confidence for skills[3].name"
+      },
+      "sources": [
+        {
+          "fieldPath": "skills[3].name",
+          "sourceKind": "resume_pdf",
+          "sourceId": "resume:sample.pdf",
+          "method": "regex_match",
+          "sourceOrder": 2,
+          "recordedAt": "2026-06-30T04:04:44.237Z",
+          "evidence": "explicit skills section"
+        }
+      ]
+    }
+  ],
+  "overallConfidence": 0.7539,
+  "provenance": [
+    {
+      "fieldPath": "full_name",
+      "sourceKind": "ats_json",
+      "sourceId": "ats:sample.json",
+      "method": "structured_field_map",
+      "sourceOrder": 1,
+      "recordedAt": "2026-06-30T04:04:44.233Z",
+      "evidence": "ats field name"
+    },
+    {
+      "fieldPath": "emails[0]",
+      "sourceKind": "ats_json",
+      "sourceId": "ats:sample.json",
+      "method": "structured_field_map",
+      "sourceOrder": 1,
+      "recordedAt": "2026-06-30T04:04:44.233Z",
+      "evidence": "ats field email"
+    },
+    {
+      "fieldPath": "phones[0]",
+      "sourceKind": "ats_json",
+      "sourceId": "ats:sample.json",
+      "method": "structured_field_map",
+      "sourceOrder": 1,
+      "recordedAt": "2026-06-30T04:04:44.233Z",
+      "evidence": "ats field phone"
+    },
+    {
+      "fieldPath": "experience[0].company",
+      "sourceKind": "ats_json",
+      "sourceId": "ats:sample.json",
+      "method": "structured_field_map",
+      "sourceOrder": 1,
+      "recordedAt": "2026-06-30T04:04:44.233Z",
+      "evidence": "ats field current_company"
+    },
+    {
+      "fieldPath": "experience[0].title",
+      "sourceKind": "ats_json",
+      "sourceId": "ats:sample.json",
+      "method": "structured_field_map",
+      "sourceOrder": 1,
+      "recordedAt": "2026-06-30T04:04:44.233Z",
+      "evidence": "ats field title"
+    },
+    {
+      "fieldPath": "full_name",
+      "sourceKind": "resume_pdf",
+      "sourceId": "resume:sample.pdf",
+      "method": "regex_match",
+      "sourceOrder": 2,
+      "recordedAt": "2026-06-30T04:04:44.237Z",
+      "evidence": "regex full-name line"
+    },
+    {
+      "fieldPath": "emails[]",
+      "sourceKind": "resume_pdf",
+      "sourceId": "resume:sample.pdf",
+      "method": "regex_match",
+      "sourceOrder": 2,
+      "recordedAt": "2026-06-30T04:04:44.237Z",
+      "evidence": "regex email"
+    },
+    {
+      "fieldPath": "phones[]",
+      "sourceKind": "resume_pdf",
+      "sourceId": "resume:sample.pdf",
+      "method": "regex_match",
+      "sourceOrder": 2,
+      "recordedAt": "2026-06-30T04:04:44.237Z",
+      "evidence": "regex phone"
+    },
+    {
+      "fieldPath": "experience[0].summary",
+      "sourceKind": "resume_pdf",
+      "sourceId": "resume:sample.pdf",
+      "method": "regex_match",
+      "sourceOrder": 2,
+      "recordedAt": "2026-06-30T04:04:44.237Z",
+      "evidence": "explicit experience block"
+    },
+    {
+      "fieldPath": "education[0].institution",
+      "sourceKind": "resume_pdf",
+      "sourceId": "resume:sample.pdf",
+      "method": "regex_match",
+      "sourceOrder": 2,
+      "recordedAt": "2026-06-30T04:04:44.237Z",
+      "evidence": "explicit education institution line"
+    },
+    {
+      "fieldPath": "skills[0].name",
+      "sourceKind": "resume_pdf",
+      "sourceId": "resume:sample.pdf",
+      "method": "regex_match",
+      "sourceOrder": 2,
+      "recordedAt": "2026-06-30T04:04:44.237Z",
+      "evidence": "explicit skills section"
+    },
+    {
+      "fieldPath": "skills[1].name",
+      "sourceKind": "resume_pdf",
+      "sourceId": "resume:sample.pdf",
+      "method": "regex_match",
+      "sourceOrder": 2,
+      "recordedAt": "2026-06-30T04:04:44.237Z",
+      "evidence": "explicit skills section"
+    },
+    {
+      "fieldPath": "skills[2].name",
+      "sourceKind": "resume_pdf",
+      "sourceId": "resume:sample.pdf",
+      "method": "regex_match",
+      "sourceOrder": 2,
+      "recordedAt": "2026-06-30T04:04:44.237Z",
+      "evidence": "explicit skills section"
+    },
+    {
+      "fieldPath": "skills[3].name",
+      "sourceKind": "resume_pdf",
+      "sourceId": "resume:sample.pdf",
+      "method": "regex_match",
+      "sourceOrder": 2,
+      "recordedAt": "2026-06-30T04:04:44.237Z",
+      "evidence": "explicit skills section"
+    }
+  ]
+}

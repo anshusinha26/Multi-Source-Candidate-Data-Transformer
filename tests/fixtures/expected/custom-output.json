@@ -1,0 +1,20 @@
+{
+  "candidate": {
+    "id": "ats:sample.json",
+    "name": "Jane Doe"
+  },
+  "contact": {
+    "primaryEmail": "jane.doe@acme.com",
+    "primaryPhone": "+14155552671"
+  },
+  "profile": {
+    "skills": [
+      "JavaScript",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "latestExperienceSummary": "Nimbus Labs - Senior Software Engineer (Mar 2021 - Present)\nBuilt deterministic profile pipelines and data quality checks.\nAcme Corporation - Software Engineer (Jan 2018 - Feb 2021)\nImplemented ATS integrations and profile normalization services."
+  },
+  "overallConfidence": 0.7539
+}
